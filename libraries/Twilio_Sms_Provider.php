@@ -4,15 +4,7 @@ class Twilio_Sms_Provider implements Sms_Provider_Core {
 	
 	public function send($to = NULL, $from = NULL, $message = NULL)
 	{
-		if (isset($from) && isset($message) && isset($to) && !empty($message) && !empty($from)) {
-			$status = sms::add($to, $message, $from);
-			if ($status === TRUE) {
-				echo "<Response><Sms>".$message."</Sms></Response>\n";
-				return;
-			}
-		} else {
-			return "Twilio not configured!";
-		}
+		return "Twilio not configured!";
 	}
 	
 }
